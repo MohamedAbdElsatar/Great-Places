@@ -3,7 +3,7 @@ import 'package:great_places/widgets/image_input.dart';
 
 class AddPlace extends StatelessWidget {
   static const routeName = '/add-place';
-   var _titleController;
+  //late TextEditingController _titleController;
   @override
   Widget build(BuildContext context) {
    
@@ -21,7 +21,7 @@ class AddPlace extends StatelessWidget {
                 child: Column(
                   children: [
                     TextField(
-                      controller: _titleController,
+                     // controller: _titleController,
                       decoration: InputDecoration(labelText: 'title'),
                     ),
                     SizedBox(height: 10),
