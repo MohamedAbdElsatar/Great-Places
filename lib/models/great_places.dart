@@ -10,13 +10,13 @@ class PlaceLocation {
       required this.address});
 }
 
-class GreatPlaces {
+class PlaceModel {
   final String id;
   final String title;
   final File image;
-  final PlaceLocation location;
+  final PlaceLocation? location;
 
-  GreatPlaces({
+  PlaceModel({
     required this.id,
     required this.title,
     required this.image,
