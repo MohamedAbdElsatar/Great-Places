@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:great_places/helper/db_helper.dart';
-import '../models/great_places.dart';
+import '../models/place_model.dart';
 
 class Places with ChangeNotifier {
   List<PlaceModel> _places = [];
@@ -40,12 +40,11 @@ class Places with ChangeNotifier {
             location: null))
         .toList();
 
-        notifyListeners();
+    notifyListeners();
   }
 
- Future <void> deletePlace(String id) async{
-
-    await DBHelper.deleteData('user_place', id);
+  void deletePlace(String id) {
+    DBHelper.deleteData('user_place', id);
     notifyListeners();
   }
 }

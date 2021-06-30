@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:great_places/providers/places.dart';
 import 'package:great_places/widgets/image_input.dart';
+import 'package:great_places/widgets/location_input.dart';
 import 'package:provider/provider.dart';
 
 class AddPlace extends StatefulWidget {
@@ -26,8 +27,8 @@ class _AddPlaceState extends State<AddPlace> {
       showDialog(
           context: context,
           builder: (ctx) => AlertDialog(
-            title: Text('Can not add place!'),
-               content:Text('Title or Image could be Empty please check it') ,
+                title: Text('Can not add place!'),
+                content: Text('Title or Image could be Empty please check it'),
                 actions: [
                   TextButton(
                       onPressed: () {
@@ -65,6 +66,9 @@ class _AddPlaceState extends State<AddPlace> {
                     ),
                     SizedBox(height: 10),
                     ImageInput(_selectImage),
+                   SizedBox(height: 10),
+                   LocationInput(),
+
                   ],
                 ),
               ),
